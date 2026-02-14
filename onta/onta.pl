@@ -45,31 +45,29 @@ sub generate_robots {
 sub get_meta {
     my ($raw_content) = @_;
     my %meta;
-    $meta{content} = $raw_content;
+    
+    $raw_content =~ s/^\x{EF}\x{BB}\x{BF}//;
+    $raw_content =~ s/\r\n/\n/g;
 
-    if ($raw_content =~ m{
-        ^\s*---\s*           # Mulai frontmatter
-        (.*?)                # Capture meta block (non-greedy)
-        \s*---\s*            # Akhiri frontmatter
-        (.*)                 # Sisanya body
-        \Z
-    }xs) {  # x: extended mode, s: dot match newline
+    if ($raw_content =~ m{^\s*---\s*\n(.*?)\n\s*---\s*\n(.*)\Z}s) {
         my $meta_block = $1;
-        my $body_block = $2 // "";
+        my $body_block = $2;
 
-        foreach my $line (split /\r?\n/, $meta_block) {
-            $line =~ s/^\s+|\s+$//g;
-            $line =~ s/\r//g; 
-            if ($line =~ /^(\w+):\s*(.*)$/) {
-                $meta{$1} = $2;
+        foreach my $line (split /\n/, $meta_block) {
+            if ($line =~ /^\s*([^:]+)\s*:\s*(.*)\s*$/) {
+                my ($k, $v) = ($1, $2);
+                $v =~ s/\s+$//;
+                $meta{$k} = $v;
             }
         }
         $meta{content} = $body_block;
+    } else {
+        $meta{content} = $raw_content;
     }
 
+    $meta{content} =~ s/^\s+//;
     return \%meta;
 }
-
 
 sub render {
     my ($data, $is_tax, $path) = @_;
