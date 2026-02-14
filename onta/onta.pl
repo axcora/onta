@@ -52,7 +52,7 @@ sub get_meta {
     if ($raw =~ s/^---\s*\n(.*?)\n---\s*\n//s) {
         my $meta_block = $1;
         foreach my $line (split /\n/, $meta_block) {
-            if ($line =~ /^\s*([^:]+)\s*:\s*(.*)\s*$/) {
+            if ($line =~ /^\s*([^:]+)\s* : \s*(.*)\s*$/x) {
                 my ($k, $v) = ($1, $2);
                 $v =~ s/\s+$//;
                 $meta{lc($k)} = $v;
