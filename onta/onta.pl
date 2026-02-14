@@ -44,32 +44,32 @@ sub generate_robots {
 
 sub get_meta {
     my ($raw_content) = @_;
-    
-    $raw_content =~ s/^\x{EF}\x{BB}\x{BF}//;
-    $raw_content =~ s/\r\n/\n/g;
-
-    my ($meta_block, $body_block) = split(/\n---\s*\n/, $raw_content, 2);
-    
-    if (!$body_block && $raw_content =~ /^---\s*\n/) {
-        my @p = split(/---\s*\n/, $raw_content);
-        $meta_block = $p[1];
-        $body_block = join('---', @p[2..$#p]);
-    }
-
     my %meta;
-    if ($meta_block) {
-        foreach my $line (split /\n/, $meta_block) {
-            if ($line =~ /^([^:]+):\s*(.*)/) {
-                my ($k, $v) = ($1, $2);
-                $v =~ s/\s+$//;
-                $meta{$k} = $v;
+    $meta{content} = $raw_content;
+
+    if ($raw_content =~ m{
+        ^\s*---\s*           # Mulai frontmatter
+        (.*?)                # Capture meta block (non-greedy)
+        \s*---\s*            # Akhiri frontmatter
+        (.*)                 # Sisanya body
+        \Z
+    }xs) {  # x: extended mode, s: dot match newline
+        my $meta_block = $1;
+        my $body_block = $2 // "";
+
+        foreach my $line (split /\r?\n/, $meta_block) {
+            $line =~ s/^\s+|\s+$//g;
+            $line =~ s/\r//g; 
+            if ($line =~ /^(\w+):\s*(.*)$/) {
+                $meta{$1} = $2;
             }
         }
+        $meta{content} = $body_block;
     }
-    
-    $meta{content} = $body_block // $raw_content;
+
     return \%meta;
 }
+
 
 sub render {
     my ($data, $is_tax, $path) = @_;
