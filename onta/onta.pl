@@ -51,7 +51,6 @@ sub get_meta {
 
     if ($raw =~ /^---\s*\n/) {
         my @parts = split(/^---\s*$/m, $raw, 3);
-        
         if (scalar @parts >= 3) {
             my $meta_block = $parts[1];
             my $body_block = $parts[2];
