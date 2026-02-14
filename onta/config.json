@@ -1,7 +1,7 @@
 {
   "site_info": {
     "title": "Onta PERL SSG - High Performance Static Site Generator",
-    "description": "Experience the ultimate speed and efficiency with Onta PERL SSG. A professional-grade static site generator built for performance, zero dependencies, and seamless cPanel deployment.",
+    "description": "Experience the ultimate speed and efficiency with Onta PERL SSG. A professional-grade static site generator built for performance, zero dependencies, and seamless terminal cPanel deployment.",
     "image": "/assets/img/PERL-AXCORA-SSG.webp",
     "favicon": "/assets/img/axcoralogowhite.webp",
     "url": "https://onta.axcora.com"
