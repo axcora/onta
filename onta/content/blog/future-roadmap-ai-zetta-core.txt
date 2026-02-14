@@ -1,0 +1,32 @@
+---
+title: Future Roadmap - Integrating AI with Zetta Core
+description: Stay ahead of the curve as we discuss the integration of AI and automation within the Axcora Zetta ecosystem for high-performance web architecture.
+image: /assets/img/PERL-SSG-axcora.webp
+date: 2026-02-13
+category: Future
+tags: AI, Automation, Zetta-Core
+---
+
+The journey of **ONTA SSG** is just beginning. As a flagship project under the **Axcora Zetta Core** brand, we are looking toward a future where AI helps automate content structure and SEO optimization directly within the build process.
+
+### The Vision of Automated Architecture
+
+Our goal is to implement [high-performance web architecture]({{current_page}}) that thinks for itself. By merging the surgical precision of Perl with modern AI models, we can achieve [automated ease of use]({{current_page}}) that was previously impossible in static environments.
+
+
+
+### Robotics-Inspired Design
+
+Our robotics-inspired design concepts aim to make automation easy for every customer. We believe that while the technology behind the scenes is complex, the user experience should remain as simple as writing a text file. This is the core of our [surgical text processing]({{current_page}}) philosophy.
+
+* **Smart SEO Tagging:** AI-driven metadata generation.
+* **Content Structuring:** Automatic formatting of raw thoughts into professional articles.
+* **Performance Optimization:** Real-time analysis of [professional static architecture]({{current_page}}) to ensure lightning-fast load times.
+
+### Scaling the Ecosystem
+
+As we scale, the integration of API-driven automation and AI development will become seamless. We are not just building a tool; we are building an ecosystem where [high-performance web architecture]({{current_page}}) is accessible to everyone.
+
+> "Automation is not about replacing the human touch; it's about giving humans the speed to reach farther." — **Axcora Zetta Core**
+
+Stay updated with our latest experiments at our lab: [www.axcora.my.id](https://www.axcora.my.id) or explore our core architecture at [www.axcora.com](https://www.axcora.com).

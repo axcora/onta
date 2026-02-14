@@ -1,0 +1,17 @@
+<div class="axcora_perl_card">
+    [if:image]
+    <img src="{{image}}" class="axcora_perl_img_responsive" style="height:200px; width:100%; object-fit:cover;" alt="{{title}}">
+    [/if]
+    [if:!image]
+    <div style="height:200px; background:var(--axcora-dark); display:flex; align-items:center; justify-content:center; color:white;">
+        {{title}}
+    </div>
+    [/if]
+    
+    <div class="axcora_perl_card_body">
+        <h3 style="margin: 10px 0;"><a href="{{url}}">{{title}}</a></h3>
+        <p style="font-size: 0.9rem; color: var(--axcora-text-muted);">{{description}}</p>
+        <a href="{{url}}" class="axcora_perl_btn axcora_perl_btn_primary" 
+        style="padding: 0.5rem 1rem; font-size: 0.8rem;">Read {{title}}</a>
+    </div>
+</div>

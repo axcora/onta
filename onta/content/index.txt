@@ -1,0 +1,15 @@
+---
+title: ONTA PERL SSG | Modern and fast static site generator
+description: build lightning-fast websites with the power of perl. no database, no lag, just pure performance.
+layout: home
+hero_badge: new evolution
+hero_title: unleash the power of perl
+hero_subtitle: onta is an optimized network template architecture designed for speed and security.
+---
+ONTA was engineered from a fundamental need to redefine the balance between architectural simplicity and enterprise-grade performance. 
+In an era of bloated frameworks, ONTA stands as a testament to lean, high-speed web deployment run with [PERL](https://www.perl.org/).
+
+By harnessing the power of Perl—the definitive standard in complex text manipulation and data processing—ONTA orchestrates information 
+with surgical precision. This is not just a generator; 
+it is a high-performance architecture designed to transform raw data into lightning-fast static sites, 
+ensuring seamless scalability and unmatched reliability for [the modern web]({{site_url}}).

@@ -1,0 +1,13 @@
+<div class="axcora_perl_container">
+    <h1 class="axcora_perl_text_primary" style="text-align:center; font-size:3rem;">{{taxonomy_title}}</h1>
+    <p style="text-align:center; margin-bottom:50px;">discover content by {{taxonomy_type}}</p>
+    
+    <div class="axcora_perl_grid axcora_perl_4grid" style="margin-top:40px;">
+        {{taxonomy_items}}
+    </div>
+    [if:pagination_numbers]
+    <div class="axcora_perl_pagination" style="margin-top: 60px;">
+        {{pagination_numbers}}
+    </div>
+    [/if]
+</div>

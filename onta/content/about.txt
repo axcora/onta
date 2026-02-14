@@ -1,0 +1,30 @@
+---
+title: About ONTA - The Philosophy of Speed
+description: Learn more about ONTA and how Axcora Zetta Core is revolutionizing static site generation through the power of Perl.
+layout: page
+---
+
+## Reimagining the Static Web
+
+Our mission is to provide a [high-performance web architecture]({{current_page}}) that is easy to deploy on any cPanel environment. We believe in the simplicity of static files and the raw power of established technologies.
+
+### The Axcora Zetta Core Vision
+
+ONTA is more than just a tool; it represents a shift back to efficiency. As an architectural brand under **Axcora**, Zetta Core focuses on speed and precision. We bridge the gap between [JAMSTACK technology]({{current_page}}) and seamless AI integration.
+
+
+### Why Perl?
+
+While the modern web is cluttered with heavy dependencies, we returned to **Perl**—the legendary king of text manipulation. This allows ONTA to achieve:
+
+* **Surgical Precision:** Processing content with minimal overhead.
+* **Zero-Dependency Reliability:** No more broken builds due to package updates.
+* **Automated Ease:** A robotic design concept that simplifies [customer automation]({{current_page}}) and API development.
+
+### Our Commitment
+
+We are dedicated to building a [static site generator]({{current_page}}) that empowers developers and business owners alike. By removing the complexity of modern deployment, we ensure your focus remains on what matters most: your content and your speed.
+
+> "Simplicity is the ultimate sophistication. ONTA is the embodiment of that principle in web architecture." — **Axcora Zetta Core**
+
+Explore our latest developments at our lab: [www.axcora.my.id](https://www.axcora.my.id) or visit our official site at [www.axcora.com](https://www.axcora.com).

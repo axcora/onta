@@ -1,0 +1,26 @@
+<section class="axcora_perl_hero">
+    <div class="axcora_perl_container">
+        <h1>{{collection_title}}</h1>
+        <p>{{collection_description}}</p>
+    </div>
+</section>
+
+<div class="axcora_perl_container">
+    <div class="axcora_perl_grid axcora_perl_3grid">
+        {{collection_items}}
+    </div>
+
+    <div style="margin-top: 60px; display: flex; justify-content: center;">
+        <ul class="axcora_perl_paginasi">
+            [if:prev_page]
+            <li><a href="{{prev_page_url}}">&laquo; Newer</a></li>
+            [/if]
+            
+            {{pagination_numbers}}
+            
+            [if:next_page]
+            <li><a href="{{next_page_url}}">Older &raquo;</a></li>
+            [/if]
+        </ul>
+    </div>
+</div>

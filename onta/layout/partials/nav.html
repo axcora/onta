@@ -1,0 +1,16 @@
+<nav class="axcora_perl_nav">
+        <div class="axcora_perl_container_fluid">
+            <div class="axcora_perl_nav_inner">
+                <a href="/" class="axcora_perl_logo">{{navbar_title}}</a>
+                <input type="checkbox" id="axcora_perl_menu_toggle">
+                <label for="axcora_perl_menu_toggle" class="axcora_perl_hamburger">☰</label>
+                <ul class="axcora_perl_nav_menu">
+                    {{navbar_links}}
+                    <li><a href="https://github.com/mesinkasir/onta-perl-ssg/archive/refs/heads/main.zip" class="axcora_perl_btn axcora_perl_btn_primary" style="color:white; margin-left:15px;">Download</a></li>
+                    [if:navbar_button_text]
+                    <li><a href="{{navbar_button_url}}" class="axcora_perl_btn axcora_perl_btn_primary" style="color:white; margin-left:15px;">{{navbar_button_text}}</a></li>
+                    [/if]
+                </ul>
+            </div>
+        </div>
+    </nav>

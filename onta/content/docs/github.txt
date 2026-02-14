@@ -1,0 +1,75 @@
+---
+title: ONTA PERL SSG on Github Repo
+description: Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on github repo.
+image: /assets/img/PERL-SSG-1.webp
+date: 2026-02-14
+layout: page
+---
+
+## Welcome to ONTA Documentation for Github Repo
+
+### Prepare ONTA SSG
+
+For first you need to work on your local device or cloud host / sharedhosting.
+See doc for local or cloudhost.
+
+Next you can build prodction mode by run `perl onta.pl` - you can see your production files into `onta` folder.
+
+### Deployment
+
+#### Upload and Push Production Mode
+
+Deployment is the easiest part of the ONTA workflow. Because it generates pure HTML:
+
+1. Run the `onta.pl` script.
+2. Upload or push the generated files to your github repo.
+3. Your site is now live on a [high-performance web architecture]({{current_page}}).
+
+#### Auto Push Github
+
+1. Make sure your site is ready for production - such a article blog, configuration and others.
+
+2. Genertate SSH KEY - Make sure your host support with SSH key, then generate a SSH Key.
+
+3. Copy the file .pub (Public Key) into your github - Open github - Settings > SSH and GPG keys.
+
+4. Open terminal and access your project.
+
+5. Now run this command
+```
+git init
+git remote add origin git@github.com:username/nama-repo.git
+```
+Next Create a push.pl in the CPANEL root, and copy paste this command: 
+```
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+print "Building ONTA...\n";
+system("perl onta.pl");
+
+print "Pushing to GitHub...\n";
+system("git add .");
+system("git commit -m 'Auto-update via cPanel'");
+system("git push origin main");
+
+print "Done! Web updated on GitHub.\n";
+```
+
+6. Push to github repo
+
+Next you can open terminal access your project , and run this command:
+```
+perl push.pl
+```
+
+Check your github repo and deploy it into github pages or vercel, netlify,clloudflare if you want.
+
+### Philosophy & Robotics
+
+As part of the **Axcora Zetta Core** brand, ONTA follows a robotics-inspired design. We aim for absolute automation, ensuring that your workflow remains as efficient as a machine while your output remains human-centric.
+
+> "The documentation is the map, but speed is the destination." — **Axcora Zetta Core**
+
+Need more help? Visit our lab at [www.axcora.my.id](https://www.axcora.my.id) or check our official site at [www.axcora.com](https://www.axcora.com).

@@ -1,0 +1,6 @@
+---
+title: Content Categories
+description: Structured articles organized by main technical categories.
+layout: taxonomy_list
+---
+Select a category to see all related posts and deep dives into specific technologies.

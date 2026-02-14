@@ -1,0 +1,35 @@
+---
+title: ONTA PERL SSG | Modern and Fast Static Site Generator
+description: Discover ONTA PERL SSG, a professional-grade engine built for high-performance web architecture and surgical text processing.
+image: /assets/img/PERL-SSGnew.webp
+author: Axcora Zetta Core
+category: Technology
+tags: Perl, SSG, Web Efficiency, JAMSTACK
+layout: collections-post
+---
+
+## The Resurrection of Efficiency
+
+**ONTA** was born from the need for a simplified yet professional [high-performance web architecture]({{current_page}}). By utilizing **Perl**, the legendary king of text manipulation, ONTA processes your data with surgical precision. It is not just a generator; it is a high-speed engine designed for those who value efficiency and zero-dependency reliability.
+
+### Why Choose ONTA?
+
+In an era of bloated frameworks and endless dependencies, ONTA returns to the core of web development. Built on the **Axcora Zetta Core** philosophy, it bridges the gap between classic power and modern [automated ease of use]({{current_page}}).
+
+* **Blazing Fast Performance:** Powered by the Perl core. While other generators are still loading heavy libraries, ONTA has already finished building your site.
+* **Zero Dependencies:** No `npm install`, no `node_modules` nightmare. It runs natively, making it perfect for [seamless cPanel deployment]({{current_page}}).
+* **JAMSTACK Ready:** Focus on security and scalability with static HTML output that is immune to traditional database attacks.
+
+### Killer Features
+
+1.  **Surgical Text Processing:** Perl understands your data structure at a granular level, ensuring every byte is optimized.
+2.  **Automated Collections:** Simply create a folder, drop your files, and let the [dynamic templating system]({{current_page}}) handle the rest.
+3.  **Robotic Design Scheme:** Engineered for automation, from API integration to AI development pathways.
+
+> "Efficiency is not just about doing things fast; it's about doing them with the right tools. ONTA is that tool." — **Axcora Zetta Core**
+
+### The Future of Static Sites
+
+Whether you are building a tech journal or a corporate portfolio, ONTA provides the [surgical precision]({{current_page}}) needed in today's digital desert. It carries your content load with minimal resource consumption, ensuring your presence is felt without the lag.
+
+Explore more at our lab: [www.axcora.my.id](https://www.axcora.my.id) or visit our official architecture site at [www.axcora.com](https://www.axcora.com).

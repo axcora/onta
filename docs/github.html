@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="fJTzwsNcz2AtRxQpJZzU7db7TLPdR_lKSAXfyWDtHB4">
+<title>ONTA PERL SSG on Github Repo</title>
+<meta name="description" content="Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on github repo.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://onta.axcora.com/docs/github.html">
+<meta property="og:url" content="https://onta.axcora.com/docs/github.html">
+<meta property="og:title" content="ONTA PERL SSG on Github Repo">
+<meta property="og:description" content="Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on github repo.">
+
+<meta property="og:image" content="../assets/img/PERL-AXCORA-SSG.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://onta.axcora.com/docs/github.html">
+<meta name="twitter:title" content="ONTA PERL SSG on Github Repo">
+<meta name="twitter:description" content="Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on github repo.">
+
+
+<meta name="twitter:image" content="../assets/img/PERL-AXCORA-SSG.webp">
+
+
+
+<link rel="icon" type="image/png" href="../assets/img/axcoralogowhite.webp">
+
+<meta name="brand" content="ONTA SSG"><meta name="architecture" content="Perl Driven, Static Site Architecture, Axcora Zetta Core Concept"><meta name="engine" content="Onta PERL SSG"><meta name="designer" content="Axcora Zetta Core + UI UX ccreativitas"><meta name="version" content="Onta V.1"><meta name="template-engine" content="Perl Custom Injector Engine">
+<link rel="stylesheet" href="https://onta.axcora.com/assets/css/axcora_zeta_perl.css">
+</head>
+<body>
+<nav class="axcora_perl_nav">
+        <div class="axcora_perl_container_fluid">
+            <div class="axcora_perl_nav_inner">
+                <a href="../" class="axcora_perl_logo">ONTA SSG</a>
+                <input type="checkbox" id="axcora_perl_menu_toggle">
+                <label for="axcora_perl_menu_toggle" class="axcora_perl_hamburger">☰</label>
+                <ul class="axcora_perl_nav_menu">
+                    <li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../docs">Docs</a></li><li><a href="../style.html">CSS</a></li><li><a href="../blog">Blog</a></li>
+                    <li><a href="https://github.com/mesinkasir/onta-perl-ssg/archive/refs/heads/main.zip" class="axcora_perl_btn axcora_perl_btn_primary" style="color:white; margin-left:15px;">Download</a></li>
+                    
+                    <li><a href="https://paypal.me/creativitas/" class="axcora_perl_btn axcora_perl_btn_primary" style="color:white; margin-left:15px;">Support Us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+<main><div class="axcora_perl_container">
+    <div class="axcora_perl_grid axcora_perl_1grid">
+        <article class="p-5">
+            
+            <img src="../assets/img/PERL-AXCORA-SSG.webp" class="axcora_perl_img_responsive" style="margin-bottom: 30px;" alt="ONTA PERL SSG on Github Repo">
+            
+            <h1 class="axcora_perl_text_primary" style="font-size: 3rem; margin-bottom: 20px;">ONTA PERL SSG on Github Repo</h1>
+            <div class="axcora_perl_typography">
+<h2>Welcome to ONTA Documentation for Github Repo</h2>
+<h3>Prepare ONTA SSG</h3>
+
+For first you need to work on your local device or cloud host / sharedhosting.
+See doc for local or cloudhost.
+
+Next you can build prodction mode by run <code>perl onta.pl</code> - you can see your production files into <code>onta</code> folder.
+<h3>Deployment</h3>
+<h3># Upload and Push Production Mode</h3>
+
+Deployment is the easiest part of the ONTA workflow. Because it generates pure HTML:
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Run the <code>onta.pl</code> script.</div>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Upload or push the generated files to your github repo.</div>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Your site is now live on a <a href="docs/github.html">high-performance web architecture</a>.</div>
+<h3># Auto Push Github</h3>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Make sure your site is ready for production - such a article blog, configuration and others.</div>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Genertate SSH KEY - Make sure your host support with SSH key, then generate a SSH Key.</div>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Copy the file .pub (Public Key) into your github - Open github - Settings > SSH and GPG keys.</div>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Open terminal and access your project.</div>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Now run this command</div>
+<pre><code>
+git init
+git remote add origin git@github.com:username/nama-repo.git
+</code></pre>
+Next Create a push.pl in the CPANEL root, and copy paste this command: 
+<pre><code>
+<h1>!/usr/bin/perl</h1>
+use strict;
+use warnings;
+
+print "Building ONTA...\n";
+system("perl onta.pl");
+
+print "Pushing to GitHub...\n";
+system("git add .");
+system("git commit -m 'Auto-update via cPanel'");
+system("git push origin main");
+
+print "Done! Web updated on GitHub.\n";
+</code></pre>
+<div style="display:list-item;list-style-type:decimal;margin-left:30px;">Push to github repo</div>
+
+Next you can open terminal access your project , and run this command:
+<pre><code>
+perl push.pl
+</code></pre>
+
+Check your github repo and deploy it into github pages or vercel, netlify,clloudflare if you want.
+<h3>Philosophy & Robotics</h3>
+
+As part of the <strong>Axcora Zetta Core</strong> brand, ONTA follows a robotics-inspired design. We aim for absolute automation, ensuring that your workflow remains as efficient as a machine while your output remains human-centric.
+<blockquote>"The documentation is the map, but speed is the destination." — <strong>Axcora Zetta Core</strong></blockquote>
+
+Need more help? Visit our lab at <a href="https://www.axcora.my.id">www.axcora.my.id</a> or check our official site at <a href="https://www.axcora.com">www.axcora.com</a>.
+            </div>
+        </article>
+    </div>
+</div>
+<script data-ad-client="ca-pub-6422989243541464" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></main>
+   <footer style="background: var(--axcora-dark); color: white; padding: 60px 0; margin-top: 50px;">
+    <div class="axcora_perl_container">
+        <div class="axcora_perl_grid axcora_perl_3grid">
+            <div>
+                <img src="../assets/img/axcoralogored.webp" class="axcora_perl_img_responsive" 
+                width="80"
+                height="80"
+                alt="Axcora Zetta Core Technology" style="margin-bottom:15px;">
+                <h3 class="axcora_perl_text_primary">Axcora Zetta Core Technology</h3>
+                <p>Empowering web efficiency through Perl-driven automation and lightning-fast static architectures.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <ul style="list-style:none; padding:0;"><li><a href="../index.html" class='text-white'>Home</a></li><li><a href="../about.html" class='text-white'>About</a></li><li><a href="../docs" class='text-white'>Docs</a></li><li><a href="../style.html" class='text-white'>CSS</a></li><li><a href="../blog" class='text-white'>Blog</a></li></ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul style="list-style:none; padding:0;"><li><a href="https://github.com/sponsors/mesinkasir" class='text-white'>Github</a></li><li><a href="https://paypal.me/creativitas/" class='text-white'>Paypal</a></li><li><a href="https://creativitaz.gumroad.com/coffee" class='text-white'>Coffee</a></li><li><a href="../mailto:hi@axcora.com" class='text-white'>Contact</a></li></ul>
+            </div>
+        </div>
+        <hr style="border:0; border-top:1px solid #333; margin:40px 0;">
+        <div style="text-align:center; font-size:0.9rem;">Copyright by Axcora - Built with ONTA PERL SSG</div>
+    </div>
+</footer>
+</body>
+</html>

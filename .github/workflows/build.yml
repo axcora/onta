@@ -1,0 +1,40 @@
+name: Build and Deploy Onta SSG
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Perl
+        uses: shogo8001/setup-perl@v1
+        with:
+          perl-version: '5.34'
+
+      - name: Install Dependencies
+        run: cpanm --notest File::Slurp JSON
+
+      - name: Build
+        run: |
+          cd onta
+          perl onta.pl
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          cname: onta.axcora.com
+          force_orphan: true
+          exclude_assets: 'onta/**, .github/**'

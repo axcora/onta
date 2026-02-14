@@ -1,0 +1,35 @@
+<section class="axcora_perl_hero">
+    <div class="axcora_perl_container">
+        <span class="axcora_perl_badge axcora_perl_badge_primary">{{hero_badge}}</span>
+        <h1>{{hero_title}}</h1>
+        <p>{{hero_subtitle}}</p>
+        <p><a href="https://github.com/mesinkasir/onta-perl-ssg/archive/refs/heads/main.zip" class="axcora_perl_btn axcora_perl_btn_primary" 
+        style="color:white; margin-left:15px;">Get PERL Onta SSG</a></p>
+    </div>
+</section>
+<div class="axcora_perl_container">
+    <div class="axcora_perl_grid axcora_perl_2grid">
+        [if:image]
+        <div class="axcora_perl_media_box">
+            <img src="{{image}}" width="100%" height="100%" class="axcora_perl_img_responsive" alt="{{title}}">
+        </div>
+        [/if]
+        <article>
+            <h2 class="axcora_perl_text_primary">{{title}}</h2>
+            <div class="axcora_perl_typography">
+                {{content}}
+            </div>
+        </article>
+    </div>
+</div>
+<div class="axcora_perl_container" style="padding: 60px 0;">
+    <div class="axcora_perl_grid axcora_perl_3grid">
+        {{blog_items}}
+    </div>
+
+    <div class="axcora_perl_container" style="margin-top: 50px;">
+        <ul class="axcora_perl_paginasi">
+            {{pagination_links}}
+        </ul>
+    </div>
+</div>

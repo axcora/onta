@@ -1,0 +1,48 @@
+<div class="axcora_perl_container">
+   <ul class="axcora_perl_breadcumb" style="margin-bottom: 10px;">
+    <li><a href="{{site_url}}">Home</a></li>
+    <li><a href="{{site_url}}/blog/">Blog</a></li>
+    <li>{{title}}</li>
+</ul>
+
+    <article class="axcora_perl_card">
+        [if:featured_image]
+<img src="{{featured_image}}" class="axcora_perl_img_responsive" alt="{{title}}">
+[/if]
+        <div style="padding: 40px;">
+            <div style="margin-bottom: 20px; display: flex; gap: 10px; align-items: center;">
+                [if:date]<span class="axcora_perl_badge axcora_perl_badge_outline">{{date}}</span>[/if]
+                [if:category]
+                <a href="/category/{{category_slug}}.html" class="axcora_perl_badge axcora_perl_badge_primary" style="text-decoration:none;">{{category}}</a>
+                [/if]
+            </div>
+
+            <h1 style="font-size: 3.5rem; margin-bottom: 25px; line-height: 1.1;">{{title}}</h1>
+            
+            <div class="axcora_perl_typography">{{content}}</div>
+
+            [if:tags]
+            <div style="margin-top: 50px; border-top: 1px solid var(--axcora-border); 
+            padding-top: 30px; display: flex; gap: 10px; align-items: center;">
+                <strong>tags:</strong> {{tags_links}}
+            </div>
+            [/if]
+        </div>
+    </article>
+
+    <div class="axcora_perl_grid axcora_perl_2grid" style="margin-top: 60px; border-top: 1px solid var(--axcora-border); padding-top: 30px;">
+        <div>
+            [if:prev_url]
+            <small>previous</small><br>
+            <a href="{{prev_url}}" class="axcora_perl_text_primary" style="font-weight:bold;">&laquo; {{prev_title}}</a>
+            [/if]
+        </div>
+        <div style="text-align: right;">
+            [if:next_url]
+            <small>next</small><br>
+            <a href="{{next_url}}" class="axcora_perl_text_primary" style="font-weight:bold;">{{next_title}} &raquo;</a>
+            [/if]
+        </div>
+    </div>
+</div>
+<script data-ad-client="ca-pub-6422989243541464" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

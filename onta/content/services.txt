@@ -1,0 +1,7 @@
+---
+title: Services Jurnal Zetta Core
+description: Kumpulan artikel teknologi, efisiensi web, dan otomatisasi Perl.
+collection_title: Artikel Terbaru
+collection_description: Menampilkan pemikiran teknis dari tim Axcora.
+---
+Konten ini opsional, bisa Anda gunakan untuk pengantar di halaman blog.

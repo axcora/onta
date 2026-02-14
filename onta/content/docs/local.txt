@@ -1,0 +1,71 @@
+---
+title: ONTA PERL SSG on Local Devices
+description: Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on your local devices.
+image: /assets/img/AXCORA-PERL-SSG.webp
+date: 2026-02-11
+layout: page
+---
+
+## Welcome to ONTA Documentation for local device
+
+**ONTA PERL SSG** is a professional-grade static site generator engineered for [high-performance web architecture]({{current_page}}). 
+Built on the **Axcora Zetta Core** philosophy, it provides a seamless bridge between raw content and lightning-fast deployment.
+
+### 1. Installation
+
+One of the core strengths of ONTA is its **Zero Dependency** nature. You don't need complex package managers.
+* Ensure you have **Perl** installed on your system (Default on Linux/macOS) [Download PERL](https://www.perl.org/get.html) or [FAST DOWNLOAD](https://strawberryperl.com/).
+* Download the ONTA starter core files.
+* Create your project folder  , Upload onta in to your project folder , Open terminal and access your project folder `cd myproject/onta/onta`
+* And now you ready to build your site
+* Open on `onta/config.json` - and update this file configure with your site.
+* Place your content in the `content/` folder.
+
+### 2. Content Structure
+
+ONTA uses a simple [surgical text processing]({{current_page}}) approach. Each page or post is a `.txt` file with metadata at the top:
+
+```text
+title: Your Title
+date: YYYY-MM-DD
+description: Short summary for SEO.
+---
+```
+
+Your content goes here in Markdown or HTML.
+
+### 3. Collections & Blogging
+
+To create a collection (like a blog or portfolio), simply create a sub-folder inside `content/`.
+
+* `content/blog/` -> Accessible at `/blog/`
+* `content/services/` -> Accessible at `/services/`
+
+ONTA will automatically handle the [automated ease of use]({{current_page}}) by generating pagination and list pages for every collection you define in `config.json`.
+
+### 4. Configuration (config.json)
+
+Control your global site settings through the configuration file. This is where you define your [professional static architecture]({{current_page}}) parameters:
+
+* **Site Info:** Title, URL, and Meta Social tags.
+* **Navbar:** Define your navigation links.
+* **Collections:** Set how many posts appear per page.
+
+### 5. Deployment
+
+Deployment is the easiest part of the ONTA workflow. Because it generates pure HTML:
+
+1. Run the `onta.pl` script.
+```
+perl onta.pl
+```
+2. Upload the generated files to any **cPanel** or **Shared Hosting** via FTP.
+3. Your site is now live on a [high-performance web architecture]({{current_page}}).
+
+### 6. Philosophy & Robotics
+
+As part of the **Axcora Zetta Core** brand, ONTA follows a robotics-inspired design. We aim for absolute automation, ensuring that your workflow remains as efficient as a machine while your output remains human-centric.
+
+> "The documentation is the map, but speed is the destination." — **Axcora Zetta Core**
+
+Need more help? Visit our lab at [www.axcora.my.id](https://www.axcora.my.id) or check our official site at [www.axcora.com](https://www.axcora.com).

@@ -1,0 +1,57 @@
+{
+  "site_info": {
+    "title": "Onta PERL SSG - High Performance Static Site Generator",
+    "description": "Experience the ultimate speed and efficiency with Onta PERL SSG. A professional-grade static site generator built for performance, zero dependencies, and seamless cPanel deployment.",
+    "image": "/assets/img/PERL-AXCORA-SSG.webp",
+    "favicon": "/assets/img/axcoralogowhite.webp",
+    "url": "https://onta.axcora.com"
+  },
+  "metasocial": {
+    "facebook": "https://onta.axcora.com",
+    "twitter": "https://onta.axcora.com",
+    "twitteruser": "https://onta.axcora.com"
+  },
+  "navbar": {
+    "title": "ONTA SSG",
+    "list": [
+      { "nav": "Home", "url": "index.html" },
+      { "nav": "About", "url": "about.html" },
+      { "nav": "Docs", "url": "docs" },
+      { "nav": "CSS", "url": "style.html" },
+      { "nav": "Blog", "url": "blog" }
+    ],
+    "button": {
+      "text": "Support Us",
+      "url": "https://paypal.me/creativitas/"
+    }
+  },
+  "collections": {
+    "blog": { "per_page": 6, "url": "/blog" },
+    "docs": { "per_page": 6, "url": "/docs" }
+    },
+  "footer": {
+    "logo": "/assets/img/axcoralogored.webp",
+    "title": "Axcora Zetta Core Technology",
+    "text": "Empowering web efficiency through Perl-driven automation and lightning-fast static architectures.",
+    "menu1": {
+      "title": "Explore",
+      "list": [
+        { "nav": "Home", "url": "index.html" },
+        { "nav": "About", "url": "about.html" },
+        { "nav": "Docs", "url": "docs" },
+        { "nav": "CSS", "url": "style.html" },
+        { "nav": "Blog", "url": "blog" }
+      ]
+    },
+    "menu2": {
+      "title": "Support",
+      "list": [
+        { "nav": "Github", "url": "https://github.com/sponsors/mesinkasir" },
+        { "nav": "Paypal", "url": "https://paypal.me/creativitas/" },
+        { "nav": "Coffee", "url": "https://creativitaz.gumroad.com/coffee" },
+        { "nav": "Contact", "url": "mailto:hi@axcora.com" }
+      ]
+    },
+    "copyrights": "Copyright by Axcora - Built with ONTA PERL SSG"
+  }
+}
