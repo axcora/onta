@@ -49,7 +49,7 @@
         { "nav": "Github", "url": "https://github.com/sponsors/mesinkasir" },
         { "nav": "Paypal", "url": "https://paypal.me/creativitas/" },
         { "nav": "Coffee", "url": "https://creativitaz.gumroad.com/coffee" },
-        { "nav": "Contact", "url": "mailto:hi@axcora.com" }
+        { "nav": "Contact", "url": "contact.html" }
       ]
     },
     "copyrights": "Copyright by Axcora - Built with ONTA PERL SSG"

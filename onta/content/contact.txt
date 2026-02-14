@@ -1,0 +1,25 @@
+---
+title: Contact - Discreet Collaboration
+description: Connect with Axcora for bespoke web architecture and technical consultancy.
+layout: page
+---
+
+## Let’s Discuss Your Next Architecture
+
+At Axcora, we view web development as a craft of precision. We don’t chase every trend; instead, we focus on building stable, efficient, and fast digital environments. If you value high-performance architecture and minimalist design, we are open to discussing your project.
+
+### Technical Consultancy & Development
+
+Whether you are looking for a bespoke web architect, an automation system powered by Perl, or an integration within the **Zetta Core** framework, we provide a focused approach to solve complex digital challenges. We prefer to let our code speak for the quality of our work.
+
+### Reach Out
+
+For project inquiries, technical collaborations, or professional consultancy, please send us a brief overview of your requirements. We respond to inquiries that align with our philosophy of speed and efficiency.
+
+* **Email:** [hi@axcora.com](mailto:hi@axcora.com)
+* **Official:** [www.axcora.com](https://www.axcora.com)
+* **Lab:** [www.axcora.my.id](https://www.axcora.my.id)
+
+We look forward to hearing from those who appreciate the art of a clean, well-architected web.
+
+---
