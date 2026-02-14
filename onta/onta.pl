@@ -43,21 +43,33 @@ sub generate_robots {
 }
 
 sub get_meta {
-    my ($raw_content) = @_;
-    my ($meta_block, $body_block) = split(/\n---\s*\n/, $raw_content, 2);
-    if (!$body_block) {
-        ($meta_block, $body_block) = split(/---/, $raw_content, 2);
-    }
+    my ($raw) = @_;
     my %meta;
-    if ($meta_block) {
-        foreach my $line (split /\n/, $meta_block) {
-            $line =~ s/\r//g; # Hapus karakter carriage return (Windows)
-            if ($line =~ /^(\w+):\s*(.*)/) {
-                $meta{$1} = $2;
+    my @body;
+    my $sep_count = 0;
+
+    $raw =~ s/^\x{EF}\x{BB}\x{BF}//;
+    $raw =~ s/\r\n/\n/g;
+
+    my @lines = split(/\n/, $raw);
+    for my $line (@lines) {
+        if ($line =~ /^---\s*$/ && $sep_count < 2) {
+            $sep_count++;
+            next;
+        }
+
+        if ($sep_count == 1) {
+            if ($line =~ /^\s*([^:]+)\s*:\s*(.*)\s*$/) {
+                my ($k, $v) = ($1, $2);
+                $v =~ s/\s+$//;
+                $meta{$k} = $v;
             }
+        } else {
+            push @body, $line;
         }
     }
-    $meta{content} = $body_block // "";
+
+    $meta{content} = join("\n", @body);
     return \%meta;
 }
 
