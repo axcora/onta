@@ -44,17 +44,25 @@ sub generate_robots {
 
 sub get_meta {
     my ($raw_content) = @_;
-    $raw_content =~ s/^\x{EF}\x{BB}\x{BF}//; 
-    $raw_content =~ s/^\s+//;
+    
+    $raw_content =~ s/^\x{EF}\x{BB}\x{BF}//;
+    $raw_content =~ s/^\x{FE}\xFF//;
+    $raw_content =~ s/^\xFF\xFE//;
     $raw_content =~ s/\r\n/\n/g;
+    $raw_content =~ s/\r/\n/g;
+    $raw_content =~ s/^\s+//;
+
     my @parts = split(/^---\s*$/m, $raw_content);
     my %meta;
     my $body_block = "";
+
     if (scalar @parts >= 3) {
         my $meta_block = $parts[1];
-        $body_block = join('---', @parts[2..$#parts]);       
+        $body_block = join('---', @parts[2..$#parts]);
+        $body_block =~ s/^\s+//;
+
         foreach my $line (split /\n/, $meta_block) {
-            if ($line =~ /^(\w+):\s*(.*)/) {
+            if ($line =~ /^\s*(\w+)\s*:\s*(.*)\s*$/) {
                 my ($key, $val) = ($1, $2);
                 $val =~ s/\s+$//;
                 $meta{$key} = $val;
