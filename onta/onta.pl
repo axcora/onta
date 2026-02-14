@@ -52,13 +52,13 @@ sub get_meta {
     $raw_content =~ s/\r/\n/g;
     $raw_content =~ s/^\s+//;
 
-    my @parts = split(/^---\s*$/m, $raw_content);
+    my @parts = split(/^---\s*$/m, $raw_content, 3);
     my %meta;
     my $body_block = "";
 
     if (scalar @parts >= 3) {
         my $meta_block = $parts[1];
-        $body_block = join('---', @parts[2..$#parts]);
+        $body_block = $parts[2];
         $body_block =~ s/^\s+//;
 
         foreach my $line (split /\n/, $meta_block) {
