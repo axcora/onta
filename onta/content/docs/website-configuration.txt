@@ -3,6 +3,7 @@ title: Website Configuration
 description: How to Setup your ONTA PERL JAMSTACK Static Site Generator
 image: /assets/img/PERL-SSGnew.webp
 date: 2026-02-14
+layout: collections-post
 ---
 
 ## Website Configuration

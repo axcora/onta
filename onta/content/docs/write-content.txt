@@ -3,6 +3,7 @@ title: Write Content
 description: How to write content article blog and static page on ONTA PERL SSG project
 image: /assets/img/ONTA-PERL-SSG.webp
 date: 2026-02-14
+layout: collections-post
 ---
 
 ## Wirte Articles

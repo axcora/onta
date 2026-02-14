@@ -3,6 +3,7 @@ title: ONTA PERL SSG on Cloud Host
 description: Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on your Hosting.
 image: /assets/img/PERL-SSG.webp
 date: 2026-02-14
+layout: collections-post
 ---
 
 ## Welcome to ONTA Documentation for Cloud Hosting
