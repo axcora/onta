@@ -42,17 +42,31 @@ sub generate_robots {
     print "  ${green}✔${reset} ${white}robots.txt${reset}\n";
 }
 
+sub read_file_pure {
+    my ($file) = @_;
+    return "" unless -e $file;
+
+    open(my $fh, "<:raw:encoding(UTF-8):utf8", $file) or return "";
+    my $data = do { local $/; <$fh> };
+    close($fh);
+
+    # Pembersihan final karakter non-printable di awal string
+    $data =~ s/^\x{FEFF}//; 
+    $data =~ s/^\s+//; 
+    
+    return $data;
+}
+
 sub get_meta {
     my ($raw) = @_;
     my %meta;
 
-    $raw =~ s/^\x{EF}\x{BB}\x{BF}//;
     $raw =~ s/\r\n/\n/g;
 
-    if ($raw =~ s/^---\s*\n(.*?)\n---\s*\n//s) {
-        my $meta_block = $1;
-        foreach my $line (split /\n/, $meta_block) {
-            if ($line =~ /^\s*([^:]+)\s* : \s*(.*)\s*$/x) {
+    if ($raw =~ s/^---\n(.*?)\n---\n//s) {
+        my $block = $1;
+        foreach (split /\n/, $block) {
+            if (/^([^:]+):\s*(.*)/) {
                 my ($k, $v) = ($1, $2);
                 $v =~ s/\s+$//;
                 $meta{lc($k)} = $v;
@@ -61,7 +75,6 @@ sub get_meta {
     }
 
     $meta{content} = $raw;
-    $meta{content} =~ s/^\s+//;
     return \%meta;
 }
 

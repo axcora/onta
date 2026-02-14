@@ -1,9 +1,8 @@
-﻿---
+---
 title: ONTA PERL SSG on Local Devices
 description: Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on your local devices.
 image: /assets/img/AXCORA-PERL-SSG.webp
 date: 2026-02-11
-layout: collections-post
 ---
 
 ## Welcome to ONTA Documentation for local device

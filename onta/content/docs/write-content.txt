@@ -1,4 +1,4 @@
-﻿---
+---
 title: Write Content
 description: How to write content article blog and static page on ONTA PERL SSG project
 image: /assets/img/ONTA-PERL-SSG.webp

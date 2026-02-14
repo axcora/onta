@@ -27,6 +27,7 @@
   },
   "collections": {
     "blog": { "per_page": 6, "url": "/blog" },
+    "services": { "per_page": 6, "url": "/services" },
     "docs": { "per_page": 6, "url": "/docs" }
     },
   "footer": {
