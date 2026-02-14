@@ -43,33 +43,31 @@ sub generate_robots {
 }
 
 sub get_meta {
-    my ($raw) = @_;
+    my ($raw_content) = @_;
+    
+    $raw_content =~ s/^\x{EF}\x{BB}\x{BF}//;
+    $raw_content =~ s/\r\n/\n/g;
+
+    my ($meta_block, $body_block) = split(/\n---\s*\n/, $raw_content, 2);
+    
+    if (!$body_block && $raw_content =~ /^---\s*\n/) {
+        my @p = split(/---\s*\n/, $raw_content);
+        $meta_block = $p[1];
+        $body_block = join('---', @p[2..$#p]);
+    }
+
     my %meta;
-    my @body;
-    my $sep_count = 0;
-
-    $raw =~ s/^\x{EF}\x{BB}\x{BF}//;
-    $raw =~ s/\r\n/\n/g;
-
-    my @lines = split(/\n/, $raw);
-    for my $line (@lines) {
-        if ($line =~ /^---\s*$/ && $sep_count < 2) {
-            $sep_count++;
-            next;
-        }
-
-        if ($sep_count == 1) {
-            if ($line =~ /^\s*([^:]+)\s*:\s*(.*)\s*$/) {
+    if ($meta_block) {
+        foreach my $line (split /\n/, $meta_block) {
+            if ($line =~ /^([^:]+):\s*(.*)/) {
                 my ($k, $v) = ($1, $2);
                 $v =~ s/\s+$//;
                 $meta{$k} = $v;
             }
-        } else {
-            push @body, $line;
         }
     }
-
-    $meta{content} = join("\n", @body);
+    
+    $meta{content} = $body_block // $raw_content;
     return \%meta;
 }
 
