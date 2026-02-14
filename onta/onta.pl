@@ -49,7 +49,7 @@ sub get_meta {
     $raw_content =~ s/^\x{EF}\x{BB}\x{BF}//;
     $raw_content =~ s/\r\n/\n/g;
 
-    if ($raw_content =~ m{^\s*---\s*\n(.*?)\n\s*---\s*\n(.*)\Z}s) {
+    if ($raw_content =~ m{^---\s*\n(.*?)\n---\s*\n(.*)}s) {
         my $meta_block = $1;
         my $body_block = $2;
 
