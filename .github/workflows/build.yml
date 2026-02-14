@@ -1,35 +1,27 @@
-name: Build and Deploy Onta SSG
+name: Build and Deploy
 
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Perl
-        uses: perl-actions/install-with-cpanm@v1
+        uses: shogo8001/setup-perl@v1
         with:
-          perl-version: '5.34'
-          install: |
-            File::Slurp
-            JSON
+          perl: '5.34'
+
+      - name: Install Dependencies
+        run: cpanm --notest File::Slurp JSON
 
       - name: Build
-        run: |
-          cd onta
-          perl onta.pl
-          mv *.html ../ 2>/dev/null || true
-          mv *.xml ../ 2>/dev/null || true
+        run: perl onta/onta.pl
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
