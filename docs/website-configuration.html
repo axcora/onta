@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="fJTzwsNcz2AtRxQpJZzU7db7TLPdR_lKSAXfyWDtHB4">
+<title>Website Configuration</title>
+<meta name="description" content="How to Setup your ONTA PERL JAMSTACK Static Site Generator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://onta.axcora.com/docs/website-configuration.html">
+<meta property="og:url" content="https://onta.axcora.com/docs/website-configuration.html">
+<meta property="og:title" content="Website Configuration">
+<meta property="og:description" content="How to Setup your ONTA PERL JAMSTACK Static Site Generator">
+
+<meta property="og:image" content="../assets/img/PERL-AXCORA-SSG.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://onta.axcora.com/docs/website-configuration.html">
+<meta name="twitter:title" content="Website Configuration">
+<meta name="twitter:description" content="How to Setup your ONTA PERL JAMSTACK Static Site Generator">
+
+
+<meta name="twitter:image" content="../assets/img/PERL-AXCORA-SSG.webp">
+
+
+
+<link rel="icon" type="image/png" href="../assets/img/axcoralogowhite.webp">
+
+<meta name="brand" content="ONTA SSG"><meta name="architecture" content="Perl Driven, Static Site Architecture, Axcora Zetta Core Concept"><meta name="engine" content="Onta PERL SSG"><meta name="designer" content="Axcora Zetta Core + UI UX ccreativitas"><meta name="version" content="Onta V.1"><meta name="template-engine" content="Perl Custom Injector Engine">
+<link rel="stylesheet" href="https://onta.axcora.com/assets/css/axcora_zeta_perl.css">
+</head>
+<body>
+<nav class="axcora_perl_nav">
+        <div class="axcora_perl_container_fluid">
+            <div class="axcora_perl_nav_inner">
+                <a href="../" class="axcora_perl_logo">ONTA SSG</a>
+                <input type="checkbox" id="axcora_perl_menu_toggle">
+                <label for="axcora_perl_menu_toggle" class="axcora_perl_hamburger">☰</label>
+                <ul class="axcora_perl_nav_menu">
+                    <li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../docs">Docs</a></li><li><a href="../style.html">CSS</a></li><li><a href="../blog">Blog</a></li>
+                    <li><a href="https://creativitaz.gumroad.com/l/onta" class="axcora_perl_btn axcora_perl_btn_primary" style="color:white; margin-left:15px;">Download</a></li>
+                    
+                    <li><a href="https://paypal.me/creativitas/" class="axcora_perl_btn axcora_perl_btn_primary" style="color:white; margin-left:15px;">Support Us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+<main><div class="axcora_perl_container">
+    <ul class="axcora_perl_breadcumb" style="margin-bottom: 10px;">
+        <li><a href="../">Home</a></li>
+        <li><a href="../docs/">Docs</a></li>
+        <li>Website Configuration</li>
+    </ul>
+
+    <article class="axcora_perl_card">
+        
+        <img src="../assets/img/PERL-SSGnew.webp" class="axcora_perl_img_responsive" alt="Website Configuration">
+        
+        <div>
+            <div style="margin-bottom: 20px; display: flex; gap: 10px; align-items: center;">
+                <span class="axcora_perl_badge axcora_perl_badge_outline">2026-02-14</span>
+                
+            </div>
+
+            <h1 style="font-size: 3.5rem; margin-bottom: 25px; line-height: 1.1;">Website Configuration</h1>
+            
+            <div class="axcora_perl_typography">## Website Configuration
+
+For first you need to setup your site project, such navbar, footer and others.
+
+Open on <code>onta/config.json</code> files.
+
+you can see the full code look like this
+<pre><code>{
+  "site_info": {
+    "title": "Onta PERL SSG - High Performance Static Site Generator",
+    "description": "Experience the ultimate speed and efficiency with Onta PERL SSG. A professional-grade static site generator built for performance, zero dependencies, and seamless cPanel deployment.",
+    "image": "/assets/img/PERL-AXCORA-SSG.webp",
+    "favicon": "/assets/img/axcoralogowhite.webp",
+    "url": "https://onta.axcora.com"
+  },
+  "metasocial": {
+    "facebook": "https://onta.axcora.com",
+    "twitter": "https://onta.axcora.com",
+    "twitteruser": "https://onta.axcora.com"
+  },
+  "navbar": {
+    "title": "ONTA SSG",
+    "list": [
+      { "nav": "Home", "url": "index.html" },
+      { "nav": "About", "url": "about.html" },
+      { "nav": "Docs", "url": "docs" },
+      { "nav": "CSS", "url": "style.html" },
+      { "nav": "Blog", "url": "blog" }
+    ],
+    "button": {
+      "text": "Support Us",
+      "url": "https://paypal.me/creativitas/"
+    }
+  },
+  "collections": {
+    "blog": { "per_page": 6, "url": "/blog" },
+    "services": { "per_page": 6, "url": "/services" }
+    },
+  "footer": {
+    "logo": "/assets/img/axcoralogored.webp",
+    "title": "Axcora Zetta Core Technology",
+    "text": "Empowering web efficiency through Perl-driven automation and lightning-fast static architectures.",
+    "menu1": {
+      "title": "Explore",
+      "list": [
+        { "nav": "Home", "url": "index.html" },
+        { "nav": "About", "url": "about.html" },
+        { "nav": "Docs", "url": "docs" },
+        { "nav": "CSS", "url": "style.html" },
+        { "nav": "Blog", "url": "blog" }
+      ]
+    },
+    "menu2": {
+      "title": "Support",
+      "list": [
+        { "nav": "Github", "url": "https://github.com/sponsors/mesinkasir" },
+        { "nav": "Paypal", "url": "https://paypal.me/creativitas/" },
+        { "nav": "Coffee", "url": "https://creativitaz.gumroad.com/coffee" },
+        { "nav": "Contact", "url": "contact.html" }
+      ]
+    },
+    "copyrights": "Copyright by Axcora - Built with ONTA PERL SSG"
+  }
+}
+</code></pre>
+<h3>Site Info</h3>
+
+This area to set your site information, for SEO metatag, open graph and twitter card
+
+<pre><code>{
+  "site_info": {
+    "title": "Onta PERL SSG - High Performance Static Site Generator",
+    "description": "Experience the ultimate speed and efficiency with Onta PERL SSG. A professional-grade static site generator built for performance, zero dependencies, and seamless cPanel deployment.",
+    "image": "/assets/img/PERL-AXCORA-SSG.webp",
+    "favicon": "/assets/img/axcoralogowhite.webp",
+    "url": "https://onta.axcora.com"
+  },
+  "metasocial": {
+    "facebook": "https://fb.com/user",
+    "twitter": "https://x.com/user",
+    "twitteruser": "@user"
+  },
+</code></pre>
+metasocial is for metadata open graph and twitter card
+
+Just change all site info and meta social with your site configuration.
+<h3>Navbar Area</h3>
+
+To handle update navbar area you can access on 
+<pre><code>  "navbar": {
+    "title": "ONTA SSG",
+    "list": [
+      { "nav": "Home", "url": "index.html" },
+      { "nav": "About", "url": "about.html" },
+      { "nav": "Docs", "url": "docs" },
+      { "nav": "CSS", "url": "style.html" },
+      { "nav": "Blog", "url": "blog" }
+    ],
+    "button": {
+      "text": "Support Us",
+      "url": "https://paypal.me/creativitas/"
+    }
+  },
+</code></pre>
+Navbar title is for title, next you can update navbar list on list area, to add new you can simply copy and paste json format.
+
+Button is for navbar button area.
+<h3>Collections</h3>
+
+Next you can update the collections data article such a blog and services for example
+
+<pre><code>  "collections": {
+    "blog": { "per_page": 6, "url": "/blog" },
+    "services": { "per_page": 6, "url": "/services" }
+    },
+</code></pre>
+Change per page display number with your need here.
+<h2>Footer Area</h2>
+
+Next you can update the footer area
+
+<pre><code>  "footer": {
+    "logo": "/assets/img/axcoralogored.webp",
+    "title": "Axcora Zetta Core Technology",
+    "text": "Empowering web efficiency through Perl-driven automation and lightning-fast static architectures.",
+    "menu1": {
+      "title": "Explore",
+      "list": [
+        { "nav": "Home", "url": "index.html" },
+        { "nav": "About", "url": "about.html" },
+        { "nav": "Docs", "url": "docs" },
+        { "nav": "CSS", "url": "style.html" },
+        { "nav": "Blog", "url": "blog" }
+      ]
+    },
+    "menu2": {
+      "title": "Support",
+      "list": [
+        { "nav": "Github", "url": "https://github.com/sponsors/mesinkasir" },
+        { "nav": "Paypal", "url": "https://paypal.me/creativitas/" },
+        { "nav": "Coffee", "url": "https://creativitaz.gumroad.com/coffee" },
+        { "nav": "Contact", "url": "contact.html" }
+      ]
+    },
+    "copyrights": "Copyright by Axcora - Built with ONTA PERL SSG"
+  }
+</code></pre>
+You can change and update this area with your site configuration.
+<blockquote>"The documentation is the map, but speed is the destination." — <strong>Axcora Zetta Core</strong></blockquote>
+
+Need more help? Visit our lab at <a href="https://www.axcora.my.id">www.axcora.my.id</a> or check our official site at <a href="https://www.axcora.com">www.axcora.com</a>.</div>
+
+            
+        </div>
+    </article>
+
+    <div class="axcora_perl_grid axcora_perl_2grid" style="margin-top: 60px; border-top: 1px solid var(--axcora-border); padding-top: 30px;">
+        <div>
+            
+            <small>previous</small><br>
+            <a href="../docs/cpanel.html" class="axcora_perl_text_primary" style="font-weight:bold;">&laquo; ONTA PERL SSG on Cloud Host</a>
+            
+        </div>
+        <div style="text-align: right;">
+            
+            <small>next</small><br>
+            <a href="../docs/write-content.html" class="axcora_perl_text_primary" style="font-weight:bold;">Write Content &raquo;</a>
+            
+        </div>
+    </div>
+</div>
+<script data-ad-client="ca-pub-6422989243541464" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></main>
+   <footer style="background: var(--axcora-dark); color: white; padding: 60px 0; margin-top: 50px;">
+    <div class="axcora_perl_container">
+        <div class="axcora_perl_grid axcora_perl_3grid">
+            <div>
+                <img src="../assets/img/axcoralogored.webp" class="axcora_perl_img_responsive" 
+                width="80"
+                height="80"
+                alt="Axcora Zetta Core Technology" style="margin-bottom:15px;">
+                <h3 class="axcora_perl_text_primary">Axcora Zetta Core Technology</h3>
+                <p>Empowering web efficiency through Perl-driven automation and lightning-fast static architectures.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <ul style="list-style:none; padding:0;"><li><a href="../index.html" class='text-white'>Home</a></li><li><a href="../about.html" class='text-white'>About</a></li><li><a href="../docs" class='text-white'>Docs</a></li><li><a href="../style.html" class='text-white'>CSS</a></li><li><a href="../blog" class='text-white'>Blog</a></li></ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul style="list-style:none; padding:0;"><li><a href="https://github.com/sponsors/mesinkasir" class='text-white'>Github</a></li><li><a href="https://paypal.me/creativitas/" class='text-white'>Paypal</a></li><li><a href="https://creativitaz.gumroad.com/coffee" class='text-white'>Coffee</a></li><li><a href="../contact.html" class='text-white'>Contact</a></li></ul>
+            </div>
+        </div>
+        <hr style="border:0; border-top:1px solid #333; margin:40px 0;">
+        <div style="text-align:center; font-size:0.9rem;">Copyright by Axcora - Built with ONTA PERL SSG</div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,366 @@
+:root {
+    --axcora-primary: #d90429;
+    --axcora-secondary: #af0404;
+    --axcora-text-on-primary: #ffffff;
+    --axcora-dark: #0f172a;
+    --axcora-light: #f8fafc;
+    --axcora-white: #ffffff;
+    --axcora-border: #e2e8f0;
+    --axcora-text-main: #334155;
+    --axcora-text-muted: #64748b;
+}
+
+* { box-sizing: border-box; }
+
+body { 
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+    margin: 0; 
+    color: var(--axcora-text-main);
+    background: var(--axcora-light); 
+    line-height: 1.6; 
+}
+
+/* 1. Layout & Containers */
+.axcora_perl_container { 
+    max-width: 1140px; 
+    margin: 0 auto; 
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.axcora_perl_container_fluid { 
+    width: 100%; 
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+article { padding: 3rem; }
+
+.axcora_perl_grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.text-white { color: var(--axcora-white); }
+
+/* 2. Navigation */
+.axcora_perl_nav { 
+    background: var(--axcora-dark); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    height: 70px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.axcora_perl_nav_inner { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.axcora_perl_logo { 
+    color: white; 
+    font-weight: 800; 
+    font-size: 1.5rem; 
+    text-decoration: none; 
+}
+.axcora_perl_logo:hover { 
+    color: var(--axcora-primary); 
+}
+
+#axcora_perl_menu_toggle { display: none; }
+.axcora_perl_hamburger { display: none; cursor: pointer; color: white; font-size: 1.8rem; }
+
+.axcora_perl_nav_menu { 
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.axcora_perl_nav_menu li a { 
+    color: white; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem; 
+    font-weight: 500; 
+}
+
+a, li.axcora_perl_breadcumb a {
+    color: var(--axcora-primary); 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+a:hover, li.axcora_perl_breadcumb a:hover {
+    color: var(--axcora-dark);
+    text-decoration: underline;
+}
+
+/* 3. Hero Section */
+.axcora_perl_hero { 
+    padding: 100px 0; 
+    background: var(--axcora-dark);
+    background-image: radial-gradient(circle at 20% 30%, rgba(255, 0, 0, 0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+    color: var(--axcora-white); 
+    text-align: center; 
+    /* border-radius: 20px; */
+    border-bottom: 5px solid var(--axcora-primary);
+}
+
+.axcora_perl_hero h1 { 
+    font-size: 3.5rem; 
+    margin: 0 0 1rem 0; 
+    font-weight: 800; 
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.axcora_perl_hero p { 
+    font-size: 1.25rem; 
+    max-width: 750px; 
+    margin: 0 auto 2.5rem auto; 
+    color: var(--axcora-white); 
+    opacity: 0.9;
+}
+
+.p-5 { padding: 25px; }
+
+/* 4. Grid System */
+.axcora_perl_1grid { grid-template-columns: 1fr; }
+.axcora_perl_2grid { grid-template-columns: repeat(2, 1fr); }
+.axcora_perl_3grid { grid-template-columns: repeat(3, 1fr); }
+.axcora_perl_4grid { grid-template-columns: repeat(4, 1fr); }
+
+/* 5. Components */
+.axcora_perl_card { 
+    background: white; 
+    border: 1px solid var(--axcora-border); 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.axcora_perl_card_body { padding: 20px; }
+
+.axcora_perl_badge { 
+    display: inline-block; 
+    padding: 0.35rem 0.8rem; 
+    font-size: 0.75rem; 
+    font-weight: 700; 
+    line-height: 1; 
+    text-align: center; 
+    white-space: nowrap; 
+    vertical-align: baseline; 
+    border-radius: 50px; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.axcora_perl_badge_primary { background: var(--axcora-primary); color: white; }
+.axcora_perl_badge_dark { background: var(--axcora-dark); color: white; }
+.axcora_perl_badge_outline { border: 1px solid var(--axcora-border); color: var(--axcora-text-main); background: transparent; }
+
+.axcora_perl_paginasi { 
+    display: flex; 
+    gap: 8px; 
+    list-style: none; 
+    padding: 10px; 
+    margin: 20px 0; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.axcora_perl_paginasi a, .axcora_perl_paginasi span { 
+    padding: 0.6rem 1.1rem; 
+    border: 1px solid var(--axcora-border); 
+    text-decoration: none; 
+    color: var(--axcora-dark); 
+    border-radius: 8px; 
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background: var(--axcora-white);
+    display: inline-block;
+}
+
+.axcora_perl_paginasi a:hover { 
+    border-color: var(--axcora-primary); 
+    color: var(--axcora-primary);
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.axcora_perl_paginasi .active { 
+    background: var(--axcora-primary); 
+    color: var(--axcora-white); 
+    border-color: var(--axcora-primary); 
+}
+
+.axcora_perl_breadcumb { display: flex; gap: 10px; list-style: none; padding: 12px; font-size: 0.9rem; }
+.axcora_perl_breadcumb li + li:before { content: "/"; color: var(--axcora-text-muted); margin-right: 10px; }
+
+/* 6. Media */
+.axcora_perl_img_responsive { max-width: 100%; height: auto; border-radius: 8px; margin: 5px 0; display: block;background: #f0f0f0; }
+img,iframe,video {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: attr(width) / attr(height);
+}
+.axcora_perl_video_container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 5px 0; }
+.axcora_perl_video_container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+/* 7. Forms */
+.axcora_perl_label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+.axcora_perl_input, .axcora_perl_textarea, .axcora_perl_select { width: 100%; padding: 0.75rem; border: 1px solid var(--axcora-border); border-radius: 6px; margin-bottom: 1rem; }
+
+/* 8. Utilities */
+.axcora_perl_bg_primary { background: var(--axcora-primary); color: white; }
+.axcora_perl_text_primary { color: var(--axcora-primary); }
+.axcora_perl_btn { padding: 0.75rem 1.5rem; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; }
+.axcora_perl_btn_primary { background: var(--axcora-primary); color: white; }
+
+/* Tables */
+.axcora_perl_table_responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 1.5rem; }
+.axcora_perl_table { width: 100%; border-collapse: collapse; background: var(--axcora-white); border: 1px solid var(--axcora-border); border-radius: 8px; overflow: hidden; }
+.axcora_perl_table th, .axcora_perl_table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--axcora-border); }
+.axcora_perl_table th { background: var(--axcora-dark); color: white; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+.axcora_perl_table tr:last-child td { border-bottom: none; }
+.axcora_perl_table_striped tr:nth-child(even) { background-color: #f8fafc; }
+.axcora_perl_table tr:hover { background-color: #f1f5f9; transition: 0.3s; }
+
+pre {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 5px solid #333;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px #000;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+code {
+    background-color: #2d2d2d;
+    color: #ff79c6;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+
+pre code {
+    background-color: transparent;
+    color: #f8f8f2;
+    padding: 0;
+}
+
+pre::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.axcora_img_box {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.axcora_perl_img_responsive {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+footer li a { color: var(--axcora-white); text-decoration: none; margin-left: 10px; padding: 5px; }
+footer li a:hover { color: var(--axcora-secondary); }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .axcora_perl_container { padding: 5px; }
+    .axcora_perl_hamburger { display: block; }
+    .axcora_perl_nav_menu { 
+        display: none;
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: #111;
+        flex-direction: column; 
+        padding: 10px 0; 
+        border-top: 2px solid var(--axcora-primary);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+        animation: slideDown 0.3s ease-out; /* Animasi masuk */
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .axcora_perl_nav_menu li {
+        width: 100%;
+    }
+
+    .axcora_perl_nav_menu li a {
+        padding: 16px 25px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Efek saat menu ditekan/hover */
+    .axcora_perl_nav_menu li a:active,
+    .axcora_perl_nav_menu li a:hover {
+        background: rgba(255,255,255,0.03);
+        padding-left: 35px; /* Sedikit bergeser ke kanan agar dinamis */
+        color: var(--axcora-primary);
+    }
+
+    /* Tombol Utama di Mobile agar Stand Out */
+    .axcora_perl_nav_menu li a.axcora_perl_btn {
+        margin: 20px 25px !important;
+        padding: 14px !important;
+        text-align: center;
+        border-radius: 8px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: var(--axcora-primary);
+        box-shadow: 0 4px 15px rgba(217, 4, 41, 0.4);
+        border: none;
+    }
+    #axcora_perl_menu_toggle:checked ~ .axcora_perl_nav_menu { display: flex; }
+    .axcora_perl_grid { grid-template-columns: 1fr !important; }
+    .axcora_perl_mobile_2grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .axcora_perl_hero h1 { font-size: 2.5rem; }
+}
