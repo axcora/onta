@@ -35,18 +35,24 @@ sub dircopy {
 
 sub get_meta {
     my ($raw) = @_;
-    my ($meta_block, $body) = $raw =~ /^---\s*(.*?)\s*---\s*(.*)/s;
     my %meta;
-    $meta{content} = $body || $raw;
-    if ($meta_block) {
-        foreach (split /\n/, $meta_block) {
-            my ($k, $v) = split /:\s*/, $_, 2;
-            if ($k && $v) {
-                $v =~ s/^\s+|\s+$//g;
+
+    $raw =~ s/^\x{EF}\x{BB}\x{BF}//;
+    $raw =~ s/\r\n/\n/g;
+
+    if ($raw =~ s/^---\s*\n(.*?)\n---\s*\n//s) {
+        my $meta_block = $1;
+        foreach my $line (split /\n/, $meta_block) {
+            if ($line =~ /^\s*([^:]+)\s*:\s*(.*)\s*$/) {
+                my ($k, $v) = ($1, $2);
+                $v =~ s/\s+$//;
                 $meta{lc($k)} = $v;
             }
         }
     }
+
+    $meta{content} = $raw;
+    $meta{content} =~ s/^\s+//;
     return \%meta;
 }
 
