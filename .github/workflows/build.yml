@@ -19,7 +19,11 @@ jobs:
           cpanm --notest File::Slurp JSON
 
       - name: Build
-        run: perl onta/onta.pl
+        run: |
+          cd onta
+          perl onta.pl
+          mv *.html ../ 2>/dev/null || true
+          mv *.xml ../ 2>/dev/null || true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
