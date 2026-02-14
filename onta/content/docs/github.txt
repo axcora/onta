@@ -1,9 +1,8 @@
----
+﻿---
 title: ONTA PERL SSG on Github Repo
 description: Learn how to build, configure, and deploy high-performance web architecture using ONTA PERL SSG on github repo.
 image: /assets/img/PERL-SSG-1.webp
 date: 2026-02-14
-layout: page
 ---
 
 ## Welcome to ONTA Documentation for Github Repo
