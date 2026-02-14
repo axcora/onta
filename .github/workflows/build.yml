@@ -36,4 +36,5 @@ jobs:
           publish_branch: gh-pages
           cname: onta.axcora.com
           force_orphan: true
+          keep_files: false
           exclude_assets: 'onta/**, .github/**'
